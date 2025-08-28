@@ -1,0 +1,8 @@
+[ 2025-08-27 16:15:41,038] ERROR __file__ (line:29) - Error occured in script: [C:\Users\laksh\document_portal\exception\custom_exception.py at line number: 25]
+         Error Message: division by zero 
+         Traceback: 
+         Traceback (most recent call last):
+  File "C:\Users\laksh\document_portal\exception\custom_exception.py", line 25, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero
+
