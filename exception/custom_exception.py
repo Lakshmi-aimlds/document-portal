@@ -7,6 +7,7 @@ logger=CustomLogger().get_logger("__file__")
 class DocumentPortalException(Exception):
     """Custom Exception class for Document Portal"""
     def __init__(self, error_message:str, error_details:sys):
+        # error_details.exec_info() returns a tupple, of which we need only last element
         _,_,exc_tb=error_details.exc_info()
         self.file_name=exc_tb.tb_frame.f_code.co_filename
         self.line_number=exc_tb.tb_lineno
@@ -26,5 +27,6 @@ if __name__ == "__main__":
         print(a)
     except Exception as e:
         app_exc=DocumentPortalException(e,sys)
+        # log and raise the exception
         logger.error(app_exc)
         raise app_exc

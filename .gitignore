@@ -5,3 +5,9 @@ venv/
 __pycache__/
 *.pyc
 test.py
+.log
+*.log
+
+# Logs
+logs/
+*.log
