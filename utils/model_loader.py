@@ -87,5 +87,9 @@ if __name__ == "__main__":
     print(f"LLM Loaded: {llm}")    
     
     # Test the ModelLoader
-    result=llm.invoke("Hello, how are you?")
-    print(f"LLM Result: {result.content}")
+    result1=embeddings.embed_query("Hello, how are you?")
+    print(f"Embedding Result: {result1}")
+    
+    # Test the ModelLoader
+    result2=llm.invoke("Hello, how are you?")
+    print(f"LLM Result: {result2.content}")
